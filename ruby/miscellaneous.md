@@ -19,3 +19,7 @@
 **pp**:
 * Pretty Print
 * Same as `p`
+
+## Falsy 
+
+Only `nil` and `false` are falsy in Ruby. All the other expressions are Truthy.

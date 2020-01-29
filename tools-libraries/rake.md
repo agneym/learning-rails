@@ -2,7 +2,7 @@
 
 There is a RakeFile. 
 
-If it's rails, you would save tasks in `lib/tasks/`. Rails allows you to 
+If it's rails, you would save tasks in `lib/tasks/`. Rails allows you to run tasks. (like npm scripts).
 
 ## Must Read/Watch
 

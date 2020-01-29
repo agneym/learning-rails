@@ -1,0 +1,25 @@
+{
+  "name": "learning-rails",
+  "version": "1.0.0",
+  "description": "Coming from a JavaScript oriented world to sneaking into a full framework like Rails. Let's see how far we can get.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agneym/learning-rails.git"
+  },
+  "keywords": [],
+  "author": "Agney <agney@outlook.in>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agneym/learning-rails/issues"
+  },
+  "homepage": "https://github.com/agneym/learning-rails#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

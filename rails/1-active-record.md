@@ -1,8 +1,10 @@
 # Active Record
 
-These are the **Models**.`
+These are the **Models**.
 
-## Naming Tables
+## Basics
+
+### Naming Tables
 
 - Active Record pluralizes the name of the Model to create the database table name.
 - If there are two words, PascalCase them.
@@ -15,7 +17,7 @@ These are the **Models**.`
 | Mouse      | mice           |
 | Person     | people         |
 
-## Naming Columns
+### Naming Columns
 
 - Foreign keys: `singularized_table_name_id`
 - Primary keys: `id` is default.
@@ -24,7 +26,7 @@ These are the **Models**.`
 
 There are other default columns, something to be vary of is the `type` column. This is used by Rails for tables with [Single Table Inheritance](https://api.rubyonrails.org/v6.0.2.1/classes/ActiveRecord/Inheritance.html).
 
-## Creating a Model
+### Creating a Model
 
 ```ruby
 class Thing < ApplicationRecord
@@ -33,7 +35,7 @@ end
 
 > You can override the rails column defaults.
 
-## CRUD
+### CRUD
 
 1. Create
 
@@ -76,6 +78,48 @@ User.destroy_by(name: "David")
 User.destroy_all
 ```
 
+## Query
+
+- `find`
+
+```ruby
+# 10 is the id - primary key
+user = User.find(10)
+users = User.find([10, 20])
+```
+
+Raises an exception if not found.
+
+- `take`
+
+```ruby
+# take 1 result from User
+user = User.take()
+# take 3 results from User
+users = User.take(3)
+```
+
+- `first`
+
+```ruby
+# first user
+user = User.first
+# first three users
+users = User.first(3)
+```
+
+- `last`
+
+Similar to `first`
+
+- `find_by`
+
+```ruby
+user = User.find_by(name: 'David')
+```
+
+### Batching Request
+
 ## Validation
 
 ```ruby
@@ -83,3 +127,5 @@ class User < ApplicationRecord
   validates :name, presence: true
 end
 ```
+
+## Migrations
